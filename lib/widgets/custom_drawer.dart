@@ -12,35 +12,52 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        children: [
-          UserInfoListTile(
-            image: AppImages.imagesAvatar3,
-            userName: 'Lekan Okeowo',
-            userEmail: 'demo@gmail.com',
-          ),
-          SizedBox(
-            height: 8,
+      child: const CustomScrollView(
+        physics: BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                UserInfoListTile(
+                  image: AppImages.imagesAvatar3,
+                  userName: 'Lekan Okeowo',
+                  userEmail: 'demo@gmail.com',
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+              ],
+            ),
           ),
           DrawerItemsListView(),
-          Expanded(child: SizedBox()),
-          InActiveDrawerItem(
-            drawerItemModel: DrawerItemModel(
-              title: 'Settings',
-              image: AppImages.imagesSettings,
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                SizedBox(
+                  height: 32,
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Settings',
+                    image: AppImages.imagesSettings,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Logout account',
+                    image: AppImages.imagesLogout,
+                  ),
+                ),
+                SizedBox(
+                  height: 48,
+                ),
+              ],
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          InActiveDrawerItem(
-            drawerItemModel: DrawerItemModel(
-              title: 'Logout account',
-              image: AppImages.imagesLogout,
-            ),
-          ),
-          SizedBox(
-            height: 48,
           ),
         ],
       ),
