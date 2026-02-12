@@ -3,9 +3,14 @@ import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/drawer_item.dart';
 
-class DrawerItemsListView extends StatelessWidget {
+class DrawerItemsListView extends StatefulWidget {
   const DrawerItemsListView({super.key});
 
+  @override
+  State<DrawerItemsListView> createState() => _DrawerItemsListViewState();
+}
+
+class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   final List<DrawerItemModel> items = const [
     DrawerItemModel(
       title: 'Dashboard',
@@ -29,6 +34,8 @@ class DrawerItemsListView extends StatelessWidget {
     ),
   ];
 
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -36,9 +43,21 @@ class DrawerItemsListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const .only(top: 20),
-          child: DrawerItem(drawerItemModel: items[index]),
+        return GestureDetector(
+          onTap: () {
+            if (selectedIndex != index) {
+              setState(() {
+                selectedIndex = index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const .only(top: 20),
+            child: DrawerItem(
+              drawerItemModel: items[index],
+              isSelected: selectedIndex == index,
+            ),
+          ),
         );
       },
     );
