@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class AppStyles {
   static const TextStyle styleRegular16 = TextStyle(
-    color: Color(0xff064060),
+    color: Color(0xff064061),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: .w400,
