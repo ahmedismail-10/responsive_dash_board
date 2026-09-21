@@ -17,7 +17,9 @@ class AllExpensesItemHeader extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 30,
-          backgroundColor: isSelected ? Colors.white10 : Colors.white,
+          backgroundColor: isSelected
+              ? Colors.white10
+              : const Color(0xffFAFAFA),
           child: SvgPicture.asset(
             image,
             colorFilter: ColorFilter.mode(
