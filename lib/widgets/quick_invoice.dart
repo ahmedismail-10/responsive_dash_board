@@ -10,6 +10,7 @@ class QuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgoundContainer(
       child: Column(
+        crossAxisAlignment: .start,
         spacing: 24,
         children: [
           QuickInvoiceHeader(),
