@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
-import 'package:responsive_dash_board/widgets/custom_button.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_buttons.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_form.dart';
@@ -12,18 +11,20 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgoundContainer(
-      child: Column(
-        crossAxisAlignment: .start,
-        spacing: 24,
-        children: [
-          QuickInvoiceHeader(),
-          LatestTransaction(),
-          Divider(
-            color: Color(0xffF1F1F1),
-          ),
-          QuickInvoiceForm(),
-          QuickInvoiceButtons(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: .start,
+          spacing: 24,
+          children: [
+            QuickInvoiceHeader(),
+            LatestTransaction(),
+            Divider(
+              color: Color(0xffF1F1F1),
+            ),
+            QuickInvoiceForm(),
+            QuickInvoiceButtons(),
+          ],
+        ),
       ),
     );
   }
