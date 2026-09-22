@@ -11,20 +11,18 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgoundContainer(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: .start,
-          spacing: 24,
-          children: [
-            QuickInvoiceHeader(),
-            LatestTransaction(),
-            Divider(
-              color: Color(0xffF1F1F1),
-            ),
-            QuickInvoiceForm(),
-            QuickInvoiceButtons(),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: .start,
+        spacing: 24,
+        children: [
+          QuickInvoiceHeader(),
+          LatestTransaction(),
+          Divider(
+            color: Color(0xffF1F1F1),
+          ),
+          QuickInvoiceForm(),
+          QuickInvoiceButtons(),
+        ],
       ),
     );
   }
