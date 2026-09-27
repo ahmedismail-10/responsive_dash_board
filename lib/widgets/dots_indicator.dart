@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_dot_indicator.dart';
 
 class DotsIndicator extends StatelessWidget {
-  const new({super.key});
+  const new({super.key, required this.currentPageIndex});
+
+  final int currentPageIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class DotsIndicator extends StatelessWidget {
       children: List.generate(
         3,
         (index) => CustomDotIndicator(
-          isActive: index == 0,
+          isActive: index == currentPageIndex,
         ),
       ),
     );
