@@ -49,7 +49,7 @@ class MyCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 12,
+                    height: 8,
                   ),
                   Text(
                     '12/20 - 124',
