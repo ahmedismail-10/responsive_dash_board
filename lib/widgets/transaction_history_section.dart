@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/transaction_history_header.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_list_view.dart';
 
 class TransactionHistorySection extends StatelessWidget {
   const new({super.key});
@@ -23,6 +24,7 @@ class TransactionHistorySection extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
+        const TransactionHistoryListView(),
       ],
     );
   }
