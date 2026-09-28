@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/income_section.dart';
+import 'package:responsive_dash_board/widgets/my_cards_and_transaction_history_section.dart';
+
+class MyCardsAndTransactionHistoryAndIncomeSection extends StatelessWidget {
+  const new({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
+              ),
+              MyCardsAndTransactionHistorySection(),
+              SizedBox(
+                height: 24,
+              ),
+              IncomeSection(),
+              SizedBox(
+                height: 32,
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
