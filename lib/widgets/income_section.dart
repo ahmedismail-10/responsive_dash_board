@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/income_details_model.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
 import 'package:responsive_dash_board/widgets/income_chart.dart';
+import 'package:responsive_dash_board/widgets/income_details_list_view.dart';
 import 'package:responsive_dash_board/widgets/income_section_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -26,9 +27,10 @@ class IncomeSection extends StatelessWidget {
     IncomeDetailsModel(
       color: Color(0xffE2DECD),
       title: 'Other',
-      value: 22.0,
+      value: 15.0,
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return CustomBackgoundContainer(
@@ -38,12 +40,15 @@ class IncomeSection extends StatelessWidget {
           const IncomeSectionHeader(),
           Expanded(
             child: Row(
-              spacing: 40,
               children: [
                 Expanded(
                   child: IncomeChart(
                     items: items,
                   ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: IncomeDetailsListView(items: items),
                 ),
               ],
             ),
