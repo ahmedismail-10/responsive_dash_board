@@ -15,7 +15,10 @@ class DashBoardTabletLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 5,
-          child: DashBoardMobileLayout(),
+          child: Padding(
+            padding: .only(top: 40),
+            child: DashBoardMobileLayout(),
+          ),
         ),
       ],
     );
