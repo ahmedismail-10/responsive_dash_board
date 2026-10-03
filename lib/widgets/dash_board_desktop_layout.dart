@@ -21,9 +21,9 @@ class DashBoardDesktopLayout extends StatelessWidget {
           flex: 8,
           child: CustomScrollView(
             slivers: [
-              SliverFillRemaining(
-                hasScrollBody: false,
+              SliverToBoxAdapter(
                 child: Row(
+                  crossAxisAlignment: .start,
                   children: [
                     Expanded(
                       flex: 5,
