@@ -92,9 +92,6 @@ abstract class AppStyles {
     );
   }
 
-  // scaleFactor
-  // responsive Font Size
-  // (min, max) fontSize
   static double getResponsiveFontSize(
     BuildContext context, {
     required double fontSize,
@@ -109,11 +106,6 @@ abstract class AppStyles {
   }
 
   static double getScaleFactor(BuildContext context) {
-    // var dispatcher = PlatformDispatcher.instance;
-    // var physicalWidth = dispatcher.views.first.physicalSize.width;
-    // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
-    // double width = physicalWidth / devicePixelRatio;
-
     final width = MediaQuery.sizeOf(context).width;
 
     if (width < SizeConfig.mobileWidth) {
