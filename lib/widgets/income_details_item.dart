@@ -12,11 +12,11 @@ class IncomeDetailsItem extends StatelessWidget {
       leading: Icon(Icons.circle, size: 12, color: incomeDetailsModel.color),
       title: Text(
         incomeDetailsModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         '${incomeDetailsModel.value.toInt()}%',
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }

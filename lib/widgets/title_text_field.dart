@@ -12,7 +12,7 @@ class TitleTextField extends StatelessWidget {
       crossAxisAlignment: .start,
       spacing: 12,
       children: [
-        Text(title, style: AppStyles.styleMedium16),
+        Text(title, style: AppStyles.styleMedium16(context)),
         CustomTextField(
           hintText: hintText,
         ),

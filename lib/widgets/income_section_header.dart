@@ -7,11 +7,11 @@ class IncomeSectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: .spaceBetween,
       children: [
-        Text('Income', style: AppStyles.styleSemiBold20),
-        RangeOptions(),
+        Text('Income', style: AppStyles.styleSemiBold20(context)),
+        const RangeOptions(),
       ],
     );
   }

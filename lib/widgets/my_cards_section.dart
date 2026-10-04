@@ -18,9 +18,9 @@ class _MyCardsSectionState extends State<MyCardsSection> {
       crossAxisAlignment: .start,
       spacing: 20,
       children: [
-        const Text(
+        Text(
           'My Cards',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         MyCardsPageView(
           onPageChanged: (value) {

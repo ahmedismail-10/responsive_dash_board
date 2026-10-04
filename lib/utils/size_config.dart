@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
 class SizeConfig {
-  static const double desktopWidth = 900;
-  static const double tabletWidth = 600;
+  // Breakpoints
+  static const double mobileWidth = 700;
+  static const double tabletWidth = 1000;
+
+  // Design reference widths
+  static const double mobileDesignWidth = 400;
+  static const double tabletDesignWidth = 800;
+  static const double desktopDesignWidth = 1440;
 
   static late double height, width;
 
   static void init(BuildContext context) {
-    height = MediaQuery.sizeOf(context).height;
-    width = MediaQuery.sizeOf(context).width;
+    final size = MediaQuery.sizeOf(context);
+    width = size.width;
+    height = size.height;
   }
 }
