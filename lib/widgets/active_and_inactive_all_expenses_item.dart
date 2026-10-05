@@ -15,6 +15,10 @@ class ActiveAllExpensesItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xff4EB7F2),
         borderRadius: .circular(12),
+        border: .all(
+          color: const Color(0xff4EB7F2),
+          width: 1,
+        ),
       ),
       child: Column(
         crossAxisAlignment: .start,
@@ -26,28 +30,37 @@ class ActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: const Color(0xffFAFAFA),
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: const Color(0xffFAFAFA),
+              ),
             ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -84,23 +97,32 @@ class InActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: .scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

@@ -15,23 +15,39 @@ class AllExpensesItemHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: .spaceBetween,
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: isSelected
-              ? Colors.white10
-              : const Color(0xffFAFAFA),
-          child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-              isSelected ? Colors.white : const Color(0xff4EB7F2),
-              .srcIn,
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+              maxWidth: 60,
+              maxHeight: 60,
+            ),
+            child: FittedBox(
+              fit: .scaleDown,
+              child: CircleAvatar(
+                radius: 30,
+                backgroundColor: isSelected
+                    ? Colors.white10
+                    : const Color(0xffFAFAFA),
+                child: SvgPicture.asset(
+                  image,
+                  colorFilter: ColorFilter.mode(
+                    isSelected ? Colors.white : const Color(0xff4EB7F2),
+                    .srcIn,
+                  ),
+                ),
+              ),
             ),
           ),
         ),
-        Icon(
-          Icons.arrow_forward_ios_outlined,
-          color: isSelected ? Colors.white : const Color(0xff064061),
-          size: 18,
+        Flexible(
+          child: FittedBox(
+            fit: .scaleDown,
+            child: Icon(
+              Icons.arrow_forward_ios_outlined,
+              color: isSelected ? Colors.white : const Color(0xff064061),
+              size: 18,
+            ),
+          ),
         ),
       ],
     );

@@ -21,11 +21,15 @@ class CustomButton extends StatelessWidget {
         ),
       ),
       onPressed: () {},
-      child: Padding(
-        padding: const .all(20),
-        child: Text(
-          text,
-          style: AppStyles.styleSemiBold18(context).copyWith(color: textColor),
+      child: FittedBox(
+        fit: .scaleDown,
+        child: Padding(
+          padding: const .all(20),
+          child: Text(
+            text,
+            style: AppStyles.styleSemiBold18(context)
+                .copyWith(color: textColor),
+          ),
         ),
       ),
     );

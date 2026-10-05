@@ -20,7 +20,7 @@ class _DashBoardViewState extends State<DashBoardView> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: const Color(0xffF7F9FA),
-      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tabletWidth
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.mobileWidth
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xffFAFAFA),
@@ -32,7 +32,7 @@ class _DashBoardViewState extends State<DashBoardView> {
               ),
             )
           : null,
-      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tabletWidth
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.mobileWidth
           ? const CustomDrawer()
           : null,
       body: AdaptiveLayout(
